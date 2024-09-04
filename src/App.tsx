@@ -1,9 +1,9 @@
+import LoginScreen from "./assets/models/login/LoginScreen"
+
 function App() {
 
   return (
-    <>
-  <div>Oi</div>
-    </>
+    <LoginScreen/>
   )
 }
 
