@@ -11,12 +11,26 @@ export const ContainerLoginScreen = styled.div`
   align-items: center;
 `;
 
+export const ContainerLogoScreen = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1D191B;
+  width: 400px;
+  height: 500px;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+
+`
+
 export const TitleLoginScreen = styled.div`
-  color: #8DE969;
+  color: #111222;
   font-size: 32px;
   font-family: 'Poppins';
   text-transform: uppercase;
-
+  font-weight: 500;
 `;
 
 export const InputAreaLoginScreen = styled.div`
@@ -24,9 +38,11 @@ export const InputAreaLoginScreen = styled.div`
   flex-direction: column;
   width: 400px;
   height: 500px;
-  background-color: #1D191B;
+  background-color: #FFF;
   padding: 20px;
-  border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   justify-content: center;
   align-items: center;
 `;
+

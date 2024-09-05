@@ -1,12 +1,19 @@
+import InputComponent from "../../components/input";
 import SVGlogo from "../../styles/icons/logo";
-import { ContainerLoginScreen, InputAreaLoginScreen, TitleLoginScreen } from "../../styles/LoginScreen";
+import { ContainerLoginScreen, ContainerLogoScreen, InputAreaLoginScreen, TitleLoginScreen } from "../../styles/LoginScreen.styles";
+import { UserOutlined, MailOutlined, KeyOutlined } from '@ant-design/icons';
 
 const LoginScreen = () => {
   return (
     <ContainerLoginScreen>
-      <SVGlogo width={250} height={250}/>
+      <ContainerLogoScreen>
+      <SVGlogo width={125} height={125}/>
+      </ContainerLogoScreen>
       <InputAreaLoginScreen>      
       <TitleLoginScreen>Login</TitleLoginScreen>
+      <InputComponent icon={<UserOutlined/>}/>
+      <InputComponent icon={<MailOutlined/>} />
+      <InputComponent icon={<KeyOutlined/>}/>
       </InputAreaLoginScreen>
     </ContainerLoginScreen>
 
