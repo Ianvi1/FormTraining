@@ -48,3 +48,35 @@ export const InputAreaLoginScreen = styled.div`
   align-items: center;
 `;
 
+export const LinkRegister = styled.a`
+  font-family: 'Poppins';
+  color: #bababa;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 8px; 
+
+  &:hover {
+    color: #d99607;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: #d99607;
+  }
+`;
+
+export const DescRegister = styled.p`
+  font-family: 'Poppins';
+  color: #bababa;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0; 
+`;
+
+export const DescRegisterContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+`;

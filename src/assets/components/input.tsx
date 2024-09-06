@@ -1,6 +1,7 @@
 import { BoxInput, InputStyled } from './input.styles';
 import { useState } from 'react';
 import { EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
+import { ButtonEye } from './button.styles';
 
 interface InputProps {
   icon?: React.ReactNode;
@@ -10,6 +11,7 @@ interface InputProps {
   type?: string;
   showPassword?: boolean;
 }
+
 
 const InputComponent = ({ icon, type = 'text', placeholder, margin, user, ...props }: InputProps) => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -26,9 +28,11 @@ const InputComponent = ({ icon, type = 'text', placeholder, margin, user, ...pro
         type={inputType}  
       />
       {type === 'password' && (
-        <button onClick={() => setIsPasswordVisible(!isPasswordVisible)}>
-          {isPasswordVisible ? <EyeOutlined /> : <EyeInvisibleOutlined />}
-        </button>
+     
+        <ButtonEye onClick={() => setIsPasswordVisible(!isPasswordVisible)}>
+          {isPasswordVisible ? <EyeOutlined/> : <EyeInvisibleOutlined />}
+       </ButtonEye>     
+        
       )}
     </BoxInput>
   );

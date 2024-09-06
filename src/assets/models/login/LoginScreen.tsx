@@ -1,7 +1,7 @@
 import { ButtonComponent } from "../../components/button";
 import InputComponent from "../../components/input";
 import SVGlogo from "../../styles/icons/logo";
-import { ContainerLoginScreen, ContainerLogoScreen, InputAreaLoginScreen, TitleLoginScreen } from "../../styles/LoginScreen.styles";
+import { ContainerLoginScreen, ContainerLogoScreen, DescRegister, DescRegisterContainer, InputAreaLoginScreen, LinkRegister, TitleLoginScreen } from "../../styles/LoginScreen.styles";
 import { UserOutlined, KeyOutlined } from '@ant-design/icons';
 
 const LoginScreen = () => {
@@ -15,7 +15,12 @@ const LoginScreen = () => {
       <InputComponent type="text" placeholder="Usuário" icon={<UserOutlined />} />
       <InputComponent type="password" placeholder="Senha" icon={<KeyOutlined />} />
       <ButtonComponent/>
+      <DescRegisterContainer>
+      <DescRegister>Não Possui Cadastro?</DescRegister>
+      <LinkRegister href="/">Cadastre-se</LinkRegister>
+      </DescRegisterContainer>
       </InputAreaLoginScreen>
+
     </ContainerLoginScreen>
 
     
