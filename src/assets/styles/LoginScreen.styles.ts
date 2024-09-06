@@ -31,6 +31,8 @@ export const TitleLoginScreen = styled.div`
   font-family: 'Poppins';
   text-transform: uppercase;
   font-weight: 500;
+  position: relative;
+  top: -35px;
 `;
 
 export const InputAreaLoginScreen = styled.div`

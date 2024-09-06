@@ -11,9 +11,9 @@ const LoginScreen = () => {
       </ContainerLogoScreen>
       <InputAreaLoginScreen>      
       <TitleLoginScreen>Login</TitleLoginScreen>
-      <InputComponent icon={<UserOutlined/>}/>
-      <InputComponent icon={<MailOutlined/>} />
-      <InputComponent icon={<KeyOutlined/>}/>
+      <InputComponent placeholder="Email" icon={<MailOutlined/>} />
+      <InputComponent placeholder="Usuário" icon={<UserOutlined/>}/>
+      <InputComponent placeholder="Senha" icon={<KeyOutlined/>}/>
       </InputAreaLoginScreen>
     </ContainerLoginScreen>
 
