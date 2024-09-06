@@ -6,8 +6,11 @@ interface BoxInputProps {
 }
 
 export const InputStyled = styled(AntdInput)`
+::placeholder {
+padding-left: 10px !important;
 
-`
+}
+  `
 
 export const BoxInput = styled.div<BoxInputProps>`
    width: 20rem; /* Equivalente a w-60 */
@@ -16,5 +19,6 @@ export const BoxInput = styled.div<BoxInputProps>`
   display: flex;
   border-radius: 0.75rem; /* Equivalente a rounded-xl */
   margin-top: 30px;
-  bottom: 20px;
+  bottom: 40px;
+  font-family: 'Poppins';
   `;

@@ -32,7 +32,7 @@ export const TitleLoginScreen = styled.div`
   text-transform: uppercase;
   font-weight: 500;
   position: relative;
-  top: -35px;
+  top: -40px;
 `;
 
 export const InputAreaLoginScreen = styled.div`
