@@ -21,6 +21,7 @@ export const ContainerLogoScreen = styled.div`
   padding: 20px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  flex-direction: column;
 
 
 `
@@ -79,4 +80,14 @@ export const DescRegisterContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 16px;
+`;
+
+export const TextLeftSide = styled.h2`
+  font-family:'Poppins';
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #bababa;
+  text-transform: uppercase;
+  margin-top: 40px;
 `;
