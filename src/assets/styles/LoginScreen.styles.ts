@@ -84,7 +84,7 @@ export const DescRegisterContainer = styled.div`
 
 export const TextLeftSide = styled.h2`
   font-family:'Poppins';
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   text-align: center;
   color: #bababa;
