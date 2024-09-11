@@ -10,7 +10,7 @@ children?: React.ReactNode;
 export const ButtonComponent: React.FC<ButtonProps> = ({onClick, children}) => {
 return (
 <Flex gap="small" wrap>
-<ButtonStyled onClick={onClick} type="primary">Entrar</ButtonStyled>
+<ButtonStyled onClick={onClick} type="primary">{children}</ButtonStyled>
 </Flex>
 );
 

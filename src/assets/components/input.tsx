@@ -1,11 +1,10 @@
 import { BoxInput, InputStyled } from './input.styles';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
 import { ButtonEye } from './button.styles';
 
 interface InputProps {
   icon?: React.ReactNode;
-  user?: string;
   placeholder?: string;
   margin?: string;
   type?: string;
@@ -14,7 +13,7 @@ interface InputProps {
   onPasswordChange?: (value: string) => void;
 }
 
-const InputComponent = ({ icon, type = 'text', placeholder, margin, user, onUserChange, onPasswordChange, ...props }: InputProps) => {
+const InputComponent = ({ icon, type = 'text', placeholder, margin, onUserChange, onPasswordChange, ...props }: InputProps) => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {

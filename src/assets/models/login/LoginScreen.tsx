@@ -20,7 +20,7 @@ const LoginScreen = () => {
   const [isFormValid, setIsFormValid] = useState(false);
 
   const validateForm = () => {
-    if (user.length > 3 && password.length > 6) {
+    if (user.length > 3 && password.length > 3) {
       setIsFormValid(true);
     } else {
       setIsFormValid(false);
@@ -31,13 +31,13 @@ const LoginScreen = () => {
     validateForm();
     if (isFormValid) {
       // Simulação de envio dos dados de login
-      console.log("Formulário válido. Dados do usuário:", {
+      console.log("Login Feito, Com seus dados sendo: ", {
         user,
         password,
       });
-      alert(`Usuário: ${user}, Senha: ${password}`);
+      alert(`Login realizado, seus dados neste login são: Usuário: ${user}, Senha: ${password}`);
     } else {
-      alert("Por favor, insira um nome de usuário com mais de 3 caracteres e uma senha com mais de 6 caracteres.");
+      alert("Por favor, insira um nome de usuário com mais de 3 caracteres e uma senha com mais de 3 caracteres.");
     }
   };
 
