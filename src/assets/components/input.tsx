@@ -10,38 +10,23 @@ interface InputProps {
   margin?: string;
   type?: string;
   showPassword?: boolean;
+  onUserChange?: (value: string) => void;
+  onPasswordChange?: (value: string) => void;
 }
 
-
-const InputComponent = ({ icon, type = 'text', placeholder, margin, user, ...props }: InputProps) => {
+const InputComponent = ({ icon, type = 'text', placeholder, margin, user, onUserChange, onPasswordChange, ...props }: InputProps) => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-  const [userValue, setUserValue] = useState(''); 
-  const [passwordValue, setPasswordValue] = useState('');  
-  const [isFormValid, setIsFormValid] = useState(false);
-  
-  const validateForm = () => {
-    if (userValue.length > 3 && passwordValue.length > 6) {
-      setIsFormValid(true);
-    } else {
-      setIsFormValid(false);
-    }
-  };
 
-  useEffect(() => {
-    validateForm();
-  }, [userValue, passwordValue]);
-
-  const handleSubmit = () => {
-    if (isFormValid) {
-      console.log('Enviando dados:', { userValue, passwordValue });
-      alert('Dados enviados com sucesso!');
-    } else {
-      alert('Por favor, preencha corretamente o formulário.');
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    if (type === 'text' && onUserChange) {
+      onUserChange(value);  // Passando o valor do usuário para o pai
+    } else if (type === 'password' && onPasswordChange) {
+      onPasswordChange(value);  // Passando o valor da senha para o pai
     }
   };
 
   const inputType = type === 'password' ? (isPasswordVisible ? 'text' : 'password') : type;
-
 
   return (
     <BoxInput margin={margin}>
@@ -50,17 +35,13 @@ const InputComponent = ({ icon, type = 'text', placeholder, margin, user, ...pro
         placeholder={placeholder}
         {...props}
         prefix={icon}
-        type={inputType}  
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          type === 'text' ? setUserValue(e.target.value) : setPasswordValue(e.target.value)
-        }
+        type={inputType}
+        onChange={handleInputChange}
       />
       {type === 'password' && (
-     
         <ButtonEye onClick={() => setIsPasswordVisible(!isPasswordVisible)}>
-          {isPasswordVisible ? <EyeOutlined/> : <EyeInvisibleOutlined />}
-       </ButtonEye>     
-        
+          {isPasswordVisible ? <EyeOutlined /> : <EyeInvisibleOutlined />}
+        </ButtonEye>
       )}
     </BoxInput>
   );
