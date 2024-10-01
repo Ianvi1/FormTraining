@@ -64,7 +64,7 @@ const LoginScreen = () => {
         <ButtonComponent onClick={handleLoginClick}>Login</ButtonComponent>
         <DescRegisterContainer>
           <DescRegister>Não possui cadastro?</DescRegister>
-          <LinkRegister href="/">Cadastre-se</LinkRegister>
+          <LinkRegister href="/register">Cadastre-se</LinkRegister>
         </DescRegisterContainer>
       </InputAreaLoginScreen>
     </ContainerLoginScreen>
